@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Morane-Saulnier L
+                  : 2015 LesterBoffo 
+
+     Source       : http://en.wikipedia.org/wiki/Morane-Saulnier_L
+                 
+     General characteristics
+
+    Crew: One or two (pilot, and observer)
+    Length: 6.88 m (19 ft 1 in)
+    Wingspan: 11.19 m (36 ft 8 in)
+    Height: 3.93 m (12 ft 10.5 in)
+    Wing area: 18 m2 (197.4 ft2)
+    Empty weight: 393 kg (865 lb)
+    Loaded weight: 678 kg (1493 lb)
+    Powerplant: 1 x Le Rhone 9C air-cooled rotary engine, 60 kW (80 hp)
+
+Performance
+
+    Maximum speed: 144 km/h (78 mph) at ground level
+    Service ceiling: 4,000 m [2] (13,123 ft)
+    Endurance: 4 hr 
+    Climb to 1,000 m (3300 ft): 8 min
+
+Armament
+
+    Guns: 1 x .303 in (7.7 mm) Lewis machine gun or .31 in (7.9 mm) Hotchkiss.
+-->
+
+<airplane mass="869" >
+
+  <approach speed="33" aoa="5" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  </approach>
+  
+  <cruise speed="79" alt="5000" fuel="0.79" >
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1" />
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.78" />
+  </cruise>
+
+  <cockpit x="1.642" y="0.00" z="0.901"/>
+
+<fuselage ax="1.61" ay="0" az="0.0" bx="1.08" by="0" bz="0.157" width="1.021" taper="0.78" midpoint="1.0"/>
+<fuselage ax="1.08" ay="0" az="0.0" bx="-0.906" by="0" bz="-0.07" width="0.831" taper="0.94" midpoint="0.3"/>
+<fuselage ax="-0.906" ay="0" az="-0.07" bx="-4.203" by="0" bz="0.08" width="0.791" taper="0.44" midpoint="0.0" cy="2.83" cz="2.17"/>
+
+  <!-- Wing -->
+  <wing x="-0.0632" y="0.0" z="0.923" 
+        chord="1.51" 
+        length="5.22"
+        incidence="2.0"
+        twist="-0.5" 
+        taper="1" 
+        camber="0.125">
+        <stall aoa="14" width="3" peak="1.5"/>
+        <flap1 start="0.69" end="1" lift="1.18" drag="1.30"/>
+      
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+      
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="0.4"/>
+  </wing>
+
+  <hstab x="-4.211" y="0.0803" z="0.009" 
+	 chord="0.636" 
+	 length="1.208" 
+       taper="0.83"
+       sweep="10"
+       effectiveness="1.5"
+       camber="0.008"> 
+         <stall aoa="20" width="4" peak="2.0"/>
+         <flap0 start="0" end="1.0" lift="1.57" drag="1.24"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+
+         <control-speed control="FLAP0" transition-time="0.2"/>
+  </hstab>
+
+  <vstab x="-4.269" y="0" z="0.3102" 
+	   chord="0.5842" 
+	   length="0.84" 
+         taper="0.69"
+         effectiveness="1.6"
+         sweep="28">
+         <stall aoa="20" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.36" drag="1.12"/>
+
+         <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+
+         <control-speed control="FLAP0" transition-time="0.2"/>
+  </vstab>
+
+  <!-- Engines      : LeRhone 9C
+
+       Informations : http://en.wikipedia.org/wiki/Le_Rhone_9C
+
+       General characteristics
+
+    Type: Nine-cylinder, single-row rotary engine
+    Bore: 105 mm (4.13 in)
+    Stroke: 140 mm (5.51 in)
+    Displacement: 10.89 L (664.47 cu in)
+    Diameter: 94.5 cm (37.2 in)
+    Dry weight: 121.5 kg (268 lb)
+
+Components
+
+    Valvetrain: Cam-operated single rocker for both inlet and exhaust valves
+    Oil system: Castor oil, total loss
+    Cooling system: Air-cooled
+
+Performance
+
+    Power output: 92 hp (68.6 kW) at 1,300 rpm (maximum)
+    Compression ratio: 4.5:1
+  -->
+
+<propeller x="1.317" y="0" z="0.00"
+             radius="1.185"
+             mass="270"
+             moment="30"
+             blades="2"
+             cruise-power="75"
+             cruise-alt="5000"
+             cruise-speed="93"
+             cruise-rpm="1240"
+             takeoff-power="84"
+             takeoff-rpm="1300"> 
+           <actionpt x="1.526" y="0" z="0.0"/>
+             <piston-engine eng-power="80"
+                            eng-rpm="1300"
+                            alt="5000"
+                            bore="4.13"
+                            stroke="5.51"
+                            compression="4.15"
+                            min-throttle="0.058"
+                            displacement="664.5"/>
+           <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+           <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+           <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+           <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+</propeller>
+
+  <!-- Left wheel -->
+  <gear x="0.75" y="0.713" z="-1.247" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.102">
+     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- Right wheel -->
+  <gear x="0.75" y="-0.713" z="-1.247" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.102">
+ <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- Tail wheel -->
+  <gear x="-4.271" y="0" z="-0.195" 
+        sfric="0.51"
+        dfric="0.46"
+        compression="0.04">
+    <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="0.25" dst1="-0.25"/>
+  </gear>
+
+  <!-- Fuel: Forward 120 lbs -->
+  <tank x="0.689" y="0" z="0.1412" capacity="170"/>
+
+    <!-- pilot weight -->
+  <weight x="0.06" y="0.0" z="0.08" mass-prop="/sim/weight[0]/weight-lb"/>
+
+   <ballast x="-0.92" y="0" z="-1.40" mass="150"/>
+  
+</airplane>

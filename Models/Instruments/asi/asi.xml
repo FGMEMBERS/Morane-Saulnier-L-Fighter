@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+<texture>
+ <path>Instruments\instruments.png</path>
+</texture>
+  
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>needle</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0.00 </ind><dep>   0 </dep></entry> <!--   0 km/h -->
+      <entry><ind>  43.19 </ind><dep>  45 </dep></entry> <!--  20 km/h -->
+      <entry><ind>  59.39 </ind><dep>  90 </dep></entry> <!--  40 km/h -->
+      <entry><ind>  71.81 </ind><dep>  135 </dep></entry> <!--  60 km/h -->
+      <entry><ind>  84.77 </ind><dep> 180 </dep></entry> <!-- 100 km/h -->
+      <entry><ind>  95.6 </ind><dep> 225 </dep></entry> <!-- 120 km/h -->
+      <entry><ind>  103.60 </ind><dep> 270 </dep></entry> <!-- 140 km/h -->
+      <entry><ind>  111.23 </ind><dep> 315 </dep></entry> <!-- 180 km/h -->
+      <entry><ind> 118.80 </ind><dep> 360 </dep></entry> <!-- 220 km/h -->
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

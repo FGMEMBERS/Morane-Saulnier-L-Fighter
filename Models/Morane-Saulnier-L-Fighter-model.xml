@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>morane-saulnier-L-fighter.ac</path>
+
+
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>windshield</object-name>
+    <object-name>propdisk</object-name>
+  </effect>
+
+   <!-- <model>
+    <path>Aircraft/Morane-Saulnier-L-Fighter/Models/m-s-n-shadow.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> 0.00 </z-m>
+    </offsets>
+  </model> -->
+
+  <model>
+    <path>Aircraft/Morane-Saulnier-L-Fighter/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -1.324 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.514 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Morane-Saulnier-L-Fighter/Models/Instruments/panel.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> 0.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Morane-Saulnier-L-Fighter/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  0.17 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.19 </z-m>
+    </offsets>
+  </model>
+
+  <!-- prop animation --> 
+  <animation>
+    <name>PropComplete</name>
+    <object-name>propdisk</object-name>
+    <object-name>LeRhone-9C</object-name>
+    <object-name>prophub</object-name>
+    <object-name>propbol</object-name>
+    <object-name>deflector</object-name>
+    <object-name>propeller</object-name>
+  </animation>
+
+  <!-- prop and engine section animation -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisk</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>400</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>propeller</object-name>
+    <object-name>deflector</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+	<value>420</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>PropComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 20 </value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -1.426 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.00 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- full-flying stabilators -->
+  <animation>
+    <type>rotate</type>
+    <object-name>stabilators</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 19 </factor>
+    <center>
+      <x-m> 4.171 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.0806 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- rudder animation -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 24 </factor>
+    <center>
+      <x-m> 4.1463 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.1517 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+    <name>leftsupension</name>
+    <object-name>leftaxle</object-name>
+    <object-name>leftwheel</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>leftsupension</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   2 </dep></entry>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -10 </dep></entry>
+    </interpolation>
+    <center>
+     <x-m> -0.7513 </x-m>
+     <y-m>  -0.0009 </y-m>
+     <z-m> -0.9844 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>rightsuspension</name>
+    <object-name>rightaxle</object-name>
+    <object-name>rightwheel</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightsuspension</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> -2 </dep></entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 10 </dep></entry>
+    </interpolation>
+    <center>
+     <x-m> -0.7513 </x-m>
+     <y-m>  0.0009 </y-m>
+     <z-m> -0.9844 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tailskid</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  2 </dep></entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -6 </dep></entry>
+    </interpolation>
+    <center>
+     <x-m>  3.925 </x-m>
+     <y-m>  0.000 </y-m>
+     <z-m>  0.293 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- wheel rotation animation -->
+  <animation>
+    <type>spin</type>
+    <object-name>leftwheel</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <center>
+     <x-m>  -0.7513 </x-m>
+     <y-m>  -0.7154 </y-m>
+     <z-m>  -0.9844 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>rightwheel</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> -30 </factor>
+    <center>
+     <x-m>  -0.7513 </x-m>
+     <y-m>  0.7154 </y-m>
+     <z-m>  -0.9844 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<!-- cockpit -->
+
+	<!-- Joystick -->
+	<animation>
+		<object-name>joystick</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<factor>12</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.1753</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.33302</z-m>
+		</center>
+	</animation>
+	<animation>
+		<object-name>joystick</object-name>
+            <object-name>joystick-fulcrum</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<factor>12</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-0.1753</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.33302</z-m>
+		</center>
+	</animation>
+
+ <!-- rudderbar -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rudderbar</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>27</factor>
+  <center>
+   <x-m> -0.5765</x-m>
+   <y-m> 0.000</y-m>
+   <z-m>-0.402</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+ </animation>
+
+
+<!-- throttle -->
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>throttle-lever</object-name>
+  <property>/controls/engines/engine/throttle</property>
+  <factor>-55</factor>
+  <center>
+	<x-m> -0.1731</x-m>
+	<y-m>0.2441</y-m>
+	<z-m>0.1032</z-m>
+  </center>
+ <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ 
+  <!-- ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>leftwarp</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 5 </factor>
+    <axis>
+      <x1-m>  0.3964 </x1-m>
+      <y1-m> -3.808 </y1-m>
+      <z1-m> 0.2746 </z1-m>
+      <x2-m>  1.2651 </x2-m>
+      <y2-m> -0.3671 </y2-m>
+      <z2-m>  0.1556 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightwarp</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> -5 </factor>
+    <axis>
+      <x1-m>  0.3964 </x1-m>
+      <y1-m> 3.808 </y1-m>
+      <z1-m> 0.2746 </z1-m>
+      <x2-m>  1.2651 </x2-m>
+      <y2-m> 0.3671 </y2-m>
+      <z2-m>  0.1556 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>left-forewarp</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 5 </factor>
+    <axis>
+      <x1-m>  0.3964 </x1-m>
+      <y1-m> -3.808 </y1-m>
+      <z1-m> 0.2746 </z1-m>
+      <x2-m>  -0.2168 </x2-m>
+      <y2-m> -0.3672 </y2-m>
+      <z2-m>  0.2677 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>right-forewarp</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> -5 </factor>
+    <axis>
+      <x1-m>  0.3964 </x1-m>
+      <y1-m> 3.808 </y1-m>
+      <z1-m> 0.2746 </z1-m>
+      <x2-m>  -0.2168 </x2-m>
+      <y2-m> 0.3672 </y2-m>
+      <z2-m>  0.2677 </z2-m>
+    </axis>
+  </animation>
+
+
+</PropertyList>
+
