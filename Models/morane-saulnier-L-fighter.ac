@@ -72684,7 +72684,7 @@ kids 0
 OBJECT poly
 name "propdisk"
 loc -0.435129 -0.0888674 0.0933882
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Morane-Saulnier_N/Models/FokProp.png"
+texture "FokProp.png"
 numvert 64
 -1.09324 0.0924295 1.05493
 -1.09324 0.316708 1.03284
