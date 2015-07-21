@@ -7845,7 +7845,7 @@ kids 0
 OBJECT poly
 name "propbol"
 loc -2.66583 0.187354 0.100102
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Nieuport-11/Models/texture.png"
+texture "Aircraft/Nieuport-11/Models/texture.png"
 numvert 85
 1.08619 -0.12919 -0.137996
 1.08619 -0.13776 -0.148477
