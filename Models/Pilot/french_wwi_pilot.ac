@@ -9,7 +9,7 @@ name "avantbrasD"
 loc -0.238674 -0.0814991 -0.0269656
 data 10
 avantbrasD
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 35
 -0.12042 0.35945 -0.076127
 -0.0268484 0.409301 -0.210898
@@ -259,7 +259,7 @@ name "avantbrasG"
 loc -0.238674 -0.0814991 -0.0269656
 data 10
 avantbrasG
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 183
 -0.0480155 0.318877 0.188553
 -0.22624 0.299255 0.238553
@@ -1764,7 +1764,7 @@ name "brasD"
 loc -0.238674 -0.0814991 -0.0269656
 data 5
 brasD
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 22
 0.184713 0.55499 -0.199286
 0.268883 0.540074 -0.198786
@@ -1945,7 +1945,7 @@ name "brasG"
 loc -0.238674 -0.0814991 -0.0269656
 data 5
 brasG
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 32
 0.263855 0.656873 0.202853
 0.282883 0.596261 0.234953
@@ -2186,7 +2186,7 @@ name "corps"
 loc -0.238674 -0.0814991 -0.0269656
 data 5
 corps
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 358
 0.0647869 0.352031 0.024053
 0.0633648 0.346946 0.068253
@@ -4324,7 +4324,7 @@ name "cuisseD"
 loc -0.238674 -0.0814991 -0.0269656
 data 11
 cuisseD.001
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 30
 -0.206238 0.251111 -0.080049
 -0.195357 0.217312 -0.01498
@@ -4531,7 +4531,7 @@ name "cuisseG"
 loc -0.238674 -0.0814991 -0.0269656
 data 7
 cuisseD
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 30
 -0.161921 0.208638 0.212753
 0.119691 0.283715 0.202053
@@ -4731,7 +4731,7 @@ name "jambeD"
 loc -0.238674 -0.0814991 -0.0269656
 data 6
 jambeD
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 112
 -0.206084 0.151544 -0.066624
 -0.184219 0.176609 -0.061224
@@ -5563,7 +5563,7 @@ name "jambeG"
 loc -0.238674 -0.0814991 -0.0269656
 data 6
 jambeG
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 112
 -0.178383 0.168618 0.139253
 -0.163251 0.199564 0.144553
@@ -6395,7 +6395,7 @@ name "lunettes"
 loc -0.316644 -0.0641101 -0.0269656
 data 8
 lunettes
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 159
 0.106092 0.767698 -0.054675
 0.113098 0.769935 -0.056075
@@ -7489,7 +7489,7 @@ name "lunettesTr"
 loc -0.316644 -0.0641101 -0.0269656
 data 10
 lunettesTr
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/transp.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/transp.png"
 numvert 30
 0.0826189 0.809546 0.052725
 0.0857515 0.788923 0.070725
@@ -7640,7 +7640,7 @@ name "manche"
 loc -0.238674 -0.0814991 -0.0269656
 data 6
 manche
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 271
 -0.150998 0.422531 -0.003133
 -0.151101 0.42318 -0.00711
@@ -9567,7 +9567,7 @@ name "piedD"
 loc -0.238674 -0.0814991 -0.0269656
 data 5
 piedD
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 51
 -0.665694 0.0225744 -0.087722
 -0.667484 0.0239909 -0.078022
@@ -9913,7 +9913,7 @@ name "piedG"
 loc -0.238674 -0.0814991 -0.0269656
 data 5
 piedG
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 51
 -0.661592 0.0448028 0.196692
 -0.650829 0.0357258 0.207292
@@ -10259,7 +10259,7 @@ name "tete"
 loc -0.316644 -0.0641101 -0.0269656
 data 4
 tete
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 703
 0.271098 0.86038 -0.046756
 0.269859 0.880848 -0.039256
@@ -15808,7 +15808,7 @@ kids 0
 OBJECT poly
 name "sphere"
 loc -0.11269 0.752083 -0.00208479
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/ww1_pilot_old.png"
 numvert 313
 0.101612 -0.031727 -0.00114842
 0.0980733 -0.0312461 0.0236391
