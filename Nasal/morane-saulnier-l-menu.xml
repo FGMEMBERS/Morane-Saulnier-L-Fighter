@@ -4,7 +4,7 @@
 
   <default>
     <menu n="40">
-      <label>Morane-Saulnier-N</label>
+      <label>Morane-Saulnier-L-fighter</label>
       <enabled type="bool">true</enabled>
       <item>
         <label>Select Livery</label>
