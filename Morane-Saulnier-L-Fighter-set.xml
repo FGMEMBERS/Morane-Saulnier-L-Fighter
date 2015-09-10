@@ -56,7 +56,7 @@
 
 	<sound>
 		<audible>true</audible>
-		<path archive="y">Aircraft/Morane-Saulnier-L/Sounds/Morane-Saulnier-L-sound.xml</path>
+		<path archive="y">Aircraft/Morane-Saulnier-L/Sounds/Morane-Saulnier-L-F-sound.xml</path>
 	</sound>
 
    <!-- <systems>
